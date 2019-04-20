@@ -39,7 +39,7 @@ After this you can instantiate a new GenericReportService, the get the report Fi
     //Example to get PDF report:
     GenericReportService service = new GenericReportService("<your_jasper_file_path>");
     try {
-        File file = service.getReport(ReportType.PDF, dto, "<your_desired_save_location");
+        File file = service.getReport(ReportType.PDF, dto, "<your_desired_save_location>");
     } catch (ReportSimplifierException e) {
         e.printStackTrace();
     }
