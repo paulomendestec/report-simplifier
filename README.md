@@ -32,7 +32,7 @@ public class ExampleDTO extends GenericDTO {
 }
 ```
 
-After this you can instantiate a new GenericReportService, the get the report File with the getReport method:
+After this you can instantiate a new GenericReportService, to get the report File with the getReport method:
 
 ```java
 
