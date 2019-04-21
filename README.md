@@ -1,6 +1,6 @@
 # Report Simplifier
 
-Report Simplifier is a small library that you can use to work with Jasper Report generation without using a Jasper Server.
+Report Simplifier is a small library that you can use to work with JasperReports® generation without using a JasperReports® Server.
 
 ## Getting Started
 
