@@ -4,9 +4,7 @@ package dev.paulomendes.report.exception;
  * Report Simplifier Exception
  * @author Paulo Mendes
  */
-public class ReportSimplifierException extends Exception {
-
-	private static final long serialVersionUID = 2555312524814908417L;
+public class ReportSimplifierException extends RuntimeException {
 
 	/**
 	 * Constructor
