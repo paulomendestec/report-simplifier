@@ -19,6 +19,39 @@ import java.util.Date;
 public class CsvOutput implements IReportOutput {
 
     /**
+     * Unique instance static variable.
+     */
+    private static CsvOutput instance;
+
+    /**
+     * Private constructor to avoid multiple instances.
+     */
+    private CsvOutput(){
+
+    }
+
+    /**
+     * Unique instance check if CsvOutput is already initialized.
+     * @return unique instance.
+     */
+    public static CsvOutput getInstance(){
+        if(instance == null){
+            synchronized (CsvOutput.class){
+                instance = (instance == null) ? new CsvOutput() : instance;
+            }
+        }
+        return instance;
+    }
+
+    /**
+     * Avoiding clone.
+     */
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException("CsvOutput can't be cloned. Single instance object.");
+    }
+
+    /**
      * Method that generate the CSV report file, according to specifications.
      * @param jasper is the previous generated JasperPrint
      * @param path Path is the path where save the report

@@ -17,19 +17,19 @@ public enum ReportType {
     PDF("pdf",1){
         @Override
         public IReportOutput getOutput() {
-            return new PdfOutput();
+            return PdfOutput.getInstance();
         }
     },
     CSV("csv", 2){
         @Override
         public IReportOutput getOutput() {
-            return new CsvOutput();
+            return CsvOutput.getInstance();
         }
     },
     XLS("xls", 3){
         @Override
         public IReportOutput getOutput() {
-            return new XlsOutput();
+            return XlsOutput.getInstance();
         }
     };
 

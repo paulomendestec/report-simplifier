@@ -18,6 +18,39 @@ import java.util.Date;
 public class PdfOutput implements IReportOutput {
 
     /**
+     * Unique instance static variable.
+     */
+    private static PdfOutput instance;
+
+    /**
+     * Private constructor to avoid multiple instances.
+     */
+    private PdfOutput(){
+
+    }
+
+    /**
+     * Unique instance check if PdfOutput is already initialized.
+     * @return unique instance.
+     */
+    public static PdfOutput getInstance(){
+        if(instance == null){
+            synchronized (PdfOutput.class){
+                instance = (instance == null) ? new PdfOutput() : instance;
+            }
+        }
+        return instance;
+    }
+
+    /**
+     * Avoiding clone.
+     */
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException("CsvOutput can't be cloned. Single instance object.");
+    }
+
+    /**
      * Method that generate the PDF report file, according to specifications.
      * @param jasper is the previous generated JasperPrint
      * @param path Path is the path where save the report

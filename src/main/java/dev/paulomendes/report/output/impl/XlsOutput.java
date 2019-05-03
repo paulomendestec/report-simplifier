@@ -19,6 +19,39 @@ import java.util.Date;
 public class XlsOutput implements IReportOutput {
 
     /**
+     * Unique instance static variable.
+     */
+    private static XlsOutput instance;
+
+    /**
+     * Private constructor to avoid multiple instances.
+     */
+    private XlsOutput(){
+
+    }
+
+    /**
+     * Unique instance check if XlsOutput is already initialized.
+     * @return unique instance.
+     */
+    public static XlsOutput getInstance(){
+        if(instance == null){
+            synchronized (XlsOutput.class){
+                instance = (instance == null) ? new XlsOutput() : instance;
+            }
+        }
+        return instance;
+    }
+
+    /**
+     * Avoiding clone.
+     */
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException("CsvOutput can't be cloned. Single instance object.");
+    }
+
+    /**
      * Method that generate the report XLS file, according to specifications.
      * @param jasper is the previous generated JasperPrint
      * @param path Path is the path where save the report
