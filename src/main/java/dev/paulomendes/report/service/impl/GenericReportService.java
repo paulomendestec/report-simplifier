@@ -16,18 +16,18 @@ public class GenericReportService implements IReportService {
     private String reportPath;
 
     /**
-     * Constructor to receive the report path
-     * @param reportPath
+     * Constructor to receive the report path.
+     * @param reportPath {@link String} report path.
      */
     public GenericReportService(String reportPath){
         this.reportPath = reportPath;
     }
 
     /**
-     * Generic implementation of processJasperReport, returns directly a JasperPrint from JasperFillManager, with DTO parameters.
-     * @param dto DTO
-     * @return JasperPrint
-     * @throws ReportSimplifierException Exception
+     * Generic implementation of processJasperReport, returns directly a {@link JasperPrint} from {@link JasperFillManager}, with {@link IReportDTO} parameters.
+     * @param dto {@link IReportDTO} DTO object.
+     * @return {@link JasperPrint} object.
+     * @throws ReportSimplifierException Was not possible to fill the report.
      */
     @Override
     public JasperPrint processJasperReport(IReportDTO dto) throws ReportSimplifierException {

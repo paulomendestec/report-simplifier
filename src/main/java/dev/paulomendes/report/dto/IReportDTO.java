@@ -12,20 +12,20 @@ import java.util.Map;
 public interface IReportDTO {
 
     /**
-     * Method that returns a transformation of DTO in a map of parameters.
-     * @return Map
+     * Method that returns a transformation of {@link IReportDTO} DTO into a {@link Map} of parameters.
+     * @return {@link Map} object.
      */
     Map<String, Object> getParameters();
 
     /**
      * Method that returns a datasource to fill the report.
-     * @return JRDataSource
+     * @return {@link JRDataSource} object.
      */
     JRDataSource getDataSource();
 
     /**
      * Static method to get empty dataSource.
-     * @return JREmptyDataSource
+     * @return {@link JREmptyDataSource} object.
      */
     static JRDataSource getEmptyDataSource(){
         return new JREmptyDataSource();

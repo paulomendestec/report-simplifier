@@ -35,7 +35,6 @@ public class ExampleDTO extends GenericDTO {
 After this you can instantiate a new GenericReportService, to get the report File with the getReport method:
 
 ```java
-
     //Example to get PDF report:
     GenericReportService service = new GenericReportService("<your_jasper_file_path>");
     try {
@@ -46,6 +45,41 @@ After this you can instantiate a new GenericReportService, to get the report Fil
 ```
 
 This will generate your file.
+
+###New DTO implementation added:
+
+Now you can transform any model in IReportDTO with Java annotations.
+
+Example:
+
+```java
+@RSModel //Annotation that represents a ReportSimplifier Model, which can be turned in IReportDTO Object
+public class ExampleModel {
+    
+    @RSParameter(name="PARAMETER") //Annotation that represents a IReportDTO parameter.
+    private String parameter;
+    
+    @RSDataSource //Annotation that represents a IReportDTO dataSource.
+    private JRDataSource dataSource;
+    
+    //Getters and Setters
+
+}
+```
+This code can be turned into IReportDTO Object creating a new instance of AnnotationGeneratedDTO, passing to constructor an instance of your model.
+
+Example:
+
+```java
+ExampleModel model = new ExampleModel();
+
+model.setParameter("FIRST PARAMETER");
+model.setDataSource(new JREmptyDataSource());
+
+IReportOutputDTO dto = new AnnotationGeneratedDTO(model);
+```
+
+RSParameter can receive a specific getter adding parameter "getter" to annotation.
 
 ## Author
 

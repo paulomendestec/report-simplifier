@@ -6,7 +6,7 @@ import net.sf.jasperreports.engine.JRDataSource;
 import java.util.Optional;
 
 /**
- * Abstract representation of a report DTO Object.
+ * Abstract representation of a {@link  IReportDTO} Object.
  * @author Paulo Mendes
  */
 public abstract class GenericDTO implements IReportDTO {
@@ -15,15 +15,15 @@ public abstract class GenericDTO implements IReportDTO {
 
     /**
      * Constructor
-     * @param dataSource receives a dataSource value to assign to local variable.
+     * @param dataSource receives a {@link JRDataSource} to assign to local variable.
      */
     GenericDTO(JRDataSource dataSource){
         this.dataSource = dataSource;
     }
 
     /**
-     * Getting local dataSource
-     * @return in case of null dataSource, returns empty dataSource.
+     * Getting local {@link JRDataSource}.
+     * @return in case of null {@link JRDataSource}, returns empty dataSource.
      */
     @Override
     public JRDataSource getDataSource() {

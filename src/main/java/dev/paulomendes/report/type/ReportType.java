@@ -42,14 +42,26 @@ public enum ReportType {
         this.value = value;
     }
 
+    /**
+     * Get {@link ReportType} by value.
+     * @param value {@link Integer} value.
+     * @return {@link ReportType}
+     * @throws ReportSimplifierException Invalid Report Type Value.
+     */
     public static ReportType getReportByValue(int value) throws ReportSimplifierException {
         return EnumSet.allOf(ReportType.class)
                 .stream()
                 .filter(e -> e.value == value)
                 .findAny()
-                .orElseThrow(() -> new ReportSimplifierException("Invalid Report Type Value"));
+                .orElseThrow(() -> new ReportSimplifierException("Invalid Report Type Value."));
     }
 
+    /**
+     *  Get {@link ReportType} by type name.
+     * @param type {@link String} type name.
+     * @return {@link ReportType}
+     * @throws ReportSimplifierException Invalid Report Type.
+     */
     public static ReportType getReportByType(String type) throws ReportSimplifierException{
         return EnumSet.allOf(ReportType.class)
                 .stream()

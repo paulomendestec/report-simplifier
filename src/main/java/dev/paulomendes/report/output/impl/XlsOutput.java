@@ -53,10 +53,10 @@ public class XlsOutput implements IReportOutput {
 
     /**
      * Method that generate the report XLS file, according to specifications.
-     * @param jasper is the previous generated JasperPrint
-     * @param path Path is the path where save the report
-     * @return a report File
-     * @throws ReportSimplifierException Exception
+     * @param jasper {@link JasperPrint} generated object.
+     * @param path {@link Path} where to save the report.
+     * @return {@link File} report file.
+     * @throws ReportSimplifierException Unable to generate XLS report.
      */
     @Override
     public File generateReport(JasperPrint jasper, Path path) throws ReportSimplifierException {

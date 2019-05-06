@@ -14,10 +14,10 @@ public interface IReportOutput {
 
     /**
      * Method that generate the report file, according to specifications.
-     * @param jasper is the previous generated JasperPrint
-     * @param path Path is the path where save the report
-     * @return a report File
-     * @throws ReportSimplifierException Exception
+     * @param jasper {@link JasperPrint} generated object.
+     * @param path {@link Path} where to save the report.
+     * @return {@link File} report file.
+     * @throws ReportSimplifierException Exception when is not possible to generate the report.
      */
     File generateReport(JasperPrint jasper, Path path) throws ReportSimplifierException;
 }

@@ -52,11 +52,11 @@ public class CsvOutput implements IReportOutput {
     }
 
     /**
-     * Method that generate the CSV report file, according to specifications.
-     * @param jasper is the previous generated JasperPrint
-     * @param path Path is the path where save the report
-     * @return a report File
-     * @throws ReportSimplifierException Exception
+     * Method that generate the report CSV file, according to specifications.
+     * @param jasper {@link JasperPrint} generated object.
+     * @param path {@link Path} where to save the report.
+     * @return {@link File} report file.
+     * @throws ReportSimplifierException Unable to generate CSV report.
      */
     @Override
     public File generateReport(JasperPrint jasper, Path path) throws ReportSimplifierException {

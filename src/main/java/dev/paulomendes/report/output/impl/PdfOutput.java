@@ -51,11 +51,11 @@ public class PdfOutput implements IReportOutput {
     }
 
     /**
-     * Method that generate the PDF report file, according to specifications.
-     * @param jasper is the previous generated JasperPrint
-     * @param path Path is the path where save the report
-     * @return a report File
-     * @throws ReportSimplifierException Exception
+     * Method that generate the report PDF file, according to specifications.
+     * @param jasper {@link JasperPrint} generated object.
+     * @param path {@link Path} where to save the report.
+     * @return {@link File} report file.
+     * @throws ReportSimplifierException Unable to generate PDF report.
      */
     @Override
     public File generateReport(JasperPrint jasper, Path path) throws ReportSimplifierException {

@@ -8,7 +8,7 @@ public class ReportSimplifierException extends RuntimeException {
 
 	/**
 	 * Constructor
-	 * @param message is the message
+	 * @param message {@link String} message.
 	 */
 	public ReportSimplifierException(String message){
 		super(message);
@@ -16,8 +16,8 @@ public class ReportSimplifierException extends RuntimeException {
 
 	/**
 	 * Constructor
-	 * @param message is the message
-	 * @param e is the Exception
+	 * @param message {@link String} message.
+	 * @param e {@link Exception} exception.
 	 */
 	public ReportSimplifierException(String message, Exception e) {
 		super(message);
