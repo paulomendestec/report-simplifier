@@ -46,7 +46,7 @@ After this you can instantiate a new GenericReportService, to get the report Fil
 
 This will generate your file.
 
-###New DTO implementation added:
+### New DTO implementation added:
 
 Now you can transform any model in IReportDTO with Java annotations.
 
