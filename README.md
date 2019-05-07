@@ -1,5 +1,5 @@
 [![License Info](https://img.shields.io/github/license/paulomendestec/report-simplifier.svg?style=flat-square)](LICENSE.md)
-![Version Info](https://img.shields.io/github/release/paulomendestec/report-simplifier.svg?style=flat-square)
+[![Version Info](https://img.shields.io/github/release/paulomendestec/report-simplifier.svg?style=flat-square)](https://github.com/paulomendestec/report-simplifier/releases)
 
 
 # Report Simplifier
