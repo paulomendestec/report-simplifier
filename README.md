@@ -81,6 +81,10 @@ IReportOutputDTO dto = new AnnotationGeneratedDTO(model);
 
 RSParameter can receive a specific getter adding parameter "getter" to annotation.
 
+## Javadoc
+
+* See [Javadoc API Reference](https://paulomendes.dev/rs-javadoc)
+
 ## Author
 
 * **Paulo Mendes** - [Visit my WebSite](https://paulomendes.dev)
