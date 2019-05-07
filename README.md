@@ -1,3 +1,7 @@
+[![License Info](https://img.shields.io/github/license/paulomendestec/report-simplifier.svg?style=flat-square)](LICENSE.md)
+![Version Info](https://img.shields.io/github/release/paulomendestec/report-simplifier.svg?style=flat-square)
+
+
 # Report Simplifier
 
 Report Simplifier is a small library that you can use to work with JasperReports® generation without using a JasperReports® Server.
