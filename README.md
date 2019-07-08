@@ -87,7 +87,7 @@ RSParameter can receive a specific getter adding parameter "getter" to annotatio
 
 ## Javadoc
 
-* See [Javadoc API Reference](https://paulomendes.dev/rs-javadoc)
+* See [Javadoc API Reference](https://paulomendes.dev/rs-javadoc/)
 
 ## Author
 
