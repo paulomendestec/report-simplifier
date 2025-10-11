@@ -27,12 +27,12 @@
     <dependency>
       <groupId>net.sf.jasperreports</groupId>
       <artifactId>jasperreports</artifactId>
-      <version>7.0.3</version>
+      <version>6.21.5</version>
     </dependency>
     <dependency>
       <groupId>net.sf.jasperreports</groupId>
       <artifactId>jasperreports-fonts</artifactId>
-      <version>7.0.3</version>
+      <version>6.21.5</version>
     </dependency>
     <!-- Apache POI -->
     <dependency>
